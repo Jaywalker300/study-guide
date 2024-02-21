@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+{% extends 'main.html' %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    <textarea name="body">{{ obj.body }}</textarea>
+    <input type="submit" value="Save Changes">
+</form>
+
+
+
+{% endblock content %}
